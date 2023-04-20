@@ -1,7 +1,9 @@
-const { Room } = require('./room');
-const { Item } = require('./item');
-const { Food } = require('./food');
-const { Enemy } = require('./enemy');
+
+const {Room} = require("./room.js");
+const {Item} = require("./item.js");
+const {Food} = require("./food.js");
+const {Enemy} = require("./enemy.js");
+const worldData = require('../data/world-data.js');
 
 class World {
 

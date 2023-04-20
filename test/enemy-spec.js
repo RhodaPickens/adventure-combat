@@ -190,7 +190,7 @@ describe ('Enemy', function () {
   });
 
 
-  it('should attack the player when targetting player', function () {
+  it('should attack the player when targeting player', function () {
 
     player.hit('enemy');
 
@@ -204,5 +204,3 @@ describe ('Enemy', function () {
   });
 
 });
-
-

@@ -1,3 +1,6 @@
+const worldData = require('../data/world-data');
+
+
 class Room {
 
   constructor(name, description) {
@@ -53,15 +56,37 @@ class Room {
 
   getItemByName(name) {
 
-    // Fill this in
+    return this.items.find(el => el.name === name);
 
   }
 
   getEnemyByName(name) {
 
-    // Fill this in
-
+    let thisEnemy;
+    let enemies = this.getEnemies();
+    enemies.forEach(enemy => {
+      if (enemy.name === name) thisEnemy = enemy;
+    })
+    return thisEnemy;
+  }
 }
+
+  // let room = new Room("Test Room", "A test room");
+  // let item = new Item("rock", "just a simple rock");
+  // let sandwich = new Food("sandwich", "a delicious looking sandwich");
+  // let enemy = new Enemy('enemy', 'an ordinary character', room);
+  // let player = new Player("player", room);
+
+  // World.enemies.push(enemy);
+  // World.setPlayer(player);
+
+  // enemy.items.push(item);
+  // room.items.push(sandwich);
+
+  // console.log(room.getEnemyByName('enemy'));
+
+
+/*******************************************/
 
 module.exports = {
   Room,
